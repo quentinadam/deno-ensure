@@ -2,7 +2,7 @@
 
 [![JSR][jsr-image]][jsr-url] [![NPM][npm-image]][npm-url] [![CI][ci-image]][ci-url]
 
-A simple function that returns and ensures that a value is not undefined or null.
+A simple function that asserts that a value is not undefined or null and returns the narrowed value.
 
 ## Usage
 
