@@ -1,0 +1,24 @@
+{
+  "name": "@quentinadam/ensure",
+  "version": "0.1.0",
+  "description": "A simple function that returns and ensures that a value is not undefined or null",
+  "license": "MIT",
+  "author": "Quentin Adam",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quentinadam/deno-ensure.git"
+  },
+  "exports": "./src/ensure.ts",
+  "imports": {
+    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.10",
+    "typescript": "npm:typescript@^5.8.3"
+  },
+  "fmt": {
+    "singleQuote": true,
+    "lineWidth": 120
+  },
+  "compilerOptions": {
+    "noUncheckedIndexedAccess": true,
+    "noImplicitReturns": true
+  }
+}
