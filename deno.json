@@ -1,6 +1,6 @@
 {
   "name": "@quentinadam/ensure",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A simple function that asserts that a value is not undefined or null and returns the narrowed value",
   "license": "MIT",
   "author": "Quentin Adam",
@@ -10,8 +10,8 @@
   },
   "exports": "./src/ensure.ts",
   "imports": {
-    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.12",
-    "typescript": "npm:typescript@^5.9.2"
+    "@quentinadam/assert": "jsr:@quentinadam/assert@^0.1.13",
+    "typescript": "npm:typescript@^5.9.3"
   },
   "fmt": {
     "singleQuote": true,
