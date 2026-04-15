@@ -7,19 +7,31 @@ A simple function that asserts that a value is not undefined or null and returns
 ## Usage
 
 ```ts
-import ensure from '@quentinadam/ensure';
+import { AssertionError, ensure } from '@quentinadam/ensure';
 
-const a = ensure(1); // doesn't throw
+const a = ensure(1); // returns 1
 
-const b = ensure(undefined); // throws an AssertionError
+try {
+  const b = ensure(undefined);
+} catch (e) {
+  // throws AssertionError
+}
 
-ensure(undefined, 'message'); // throws an AssertionError with a custom error message
+try {
+  const c = ensure(undefined, 'Value is required');
+} catch (e) {
+  // throws AssertionError with custom message
+}
 
-ensure(undefined, new Error('message')); // throws a custom Error
+try {
+  const d = ensure(undefined, new Error('Value is required'));
+} catch (e) {
+  // throws a custom Error
+}
 
 const value: string | undefined = 'hello';
-const narrowedValue = ensure(value); // narrows the type of value to string;
-value.toUpperCase(); // works
+const narrowedValue = ensure(value); // narrows the type to string
+narrowedValue.toUpperCase(); // works
 ```
 
 [ci-image]: https://img.shields.io/github/actions/workflow/status/quentinadam/deno-ensure/ci.yml?branch=main&logo=github&style=flat-square
